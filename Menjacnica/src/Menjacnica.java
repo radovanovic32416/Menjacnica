@@ -19,11 +19,8 @@ public class Menjacnica implements MenjacnicaInterfejs {
 	@Override
 	public void obrisiKurs(GregorianCalendar datum) {
 		for (int i = 0; i < valute.size(); i++) {
-			if (valute.get(i).getDatum().equals(datum)) {
-				valute.get(i).getKurs().setKupovni(0);
-				valute.get(i).getKurs().setProdajni(0);
-				valute.get(i).getKurs().setSrednji(0);
-			}
+			if (valute.get(i).getDatum().equals(datum))
+				valute.get(i).setKurs(null);
 		}
 	}
 
