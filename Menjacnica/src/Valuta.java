@@ -11,7 +11,10 @@ public class Valuta {
 	}
 
 	public void setNaziv(String naziv) {
-		this.naziv = naziv;
+		if (naziv == null)
+			throw new RuntimeException("Morate uneti naziv!");
+		else
+			this.naziv = naziv;
 	}
 
 	public String getSkracenica() {
@@ -19,7 +22,10 @@ public class Valuta {
 	}
 
 	public void setSkracenica(String skracenica) {
-		this.skracenica = skracenica;
+		if (skracenica == null)
+			throw new RuntimeException("Morate uneti skracenicu!");
+		else
+			this.skracenica = skracenica;
 	}
 
 	public GregorianCalendar getDatum() {
@@ -27,7 +33,10 @@ public class Valuta {
 	}
 
 	public void setDatum(GregorianCalendar datum) {
-		this.datum = datum;
+		if (datum == null)
+			throw new RuntimeException("Morate uneti datum!");
+		else
+			this.datum = datum;
 	}
 
 	public Kurs getKurs() {
@@ -35,7 +44,10 @@ public class Valuta {
 	}
 
 	public void setKurs(Kurs kurs) {
-		this.kurs = kurs;
+		if (kurs == null)
+			throw new RuntimeException("Morate uneti kurs!");
+		else
+			this.kurs = kurs;
 	}
 
 	@Override

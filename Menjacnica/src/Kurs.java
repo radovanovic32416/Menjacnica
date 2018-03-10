@@ -9,7 +9,10 @@ public class Kurs {
 	}
 
 	public void setProdajni(double prodajni) {
-		this.prodajni = prodajni;
+		if (prodajni < 0)
+			throw new RuntimeException("Nije uneta odgovarajuca vrednost za prodajni kurs!");
+		else
+			this.prodajni = prodajni;
 	}
 
 	public double getKupovni() {
@@ -17,7 +20,10 @@ public class Kurs {
 	}
 
 	public void setKupovni(double kupovni) {
-		this.kupovni = kupovni;
+		if (kupovni < 0)
+			throw new RuntimeException("Nije uneta odgovarajuca vrednost za kupovni kurs!");
+		else
+			this.kupovni = kupovni;
 	}
 
 	public double getSrednji() {
@@ -25,7 +31,10 @@ public class Kurs {
 	}
 
 	public void setSrednji(double srednji) {
-		this.srednji = srednji;
+		if (srednji < 0)
+			throw new RuntimeException("Nije uneta odgovarajuca vrednost za srednji kurs!");
+		else
+			this.srednji = srednji;
 	}
 
 	@Override
